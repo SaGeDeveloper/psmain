@@ -626,6 +626,9 @@
  <Reference Include="Unity.RenderPipelines.Universal.Shaders">
  <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ProGrids">
+ <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -643,6 +646,9 @@
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
  <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProGrids.Editor">
+ <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -682,12 +688,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProGrids">
- <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProGrids.Editor">
- <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -10,24 +10,37 @@ public class PortalRenderer : MonoBehaviour
     public int debugTotalRenderCount;
 
     private Camera mainCamera;
-    private PortalRecursionController[] allPortals;
+    private PortalVisualiser[] allPortals;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        allPortals = FindObjectsOfType<PortalRecursionController>();
+        allPortals = FindObjectsOfType<PortalVisualiser>();
     }
+    
 
-    private void OnPreRender()
+
+    private void LateUpdate()
     {
+        Debug.Log("PRERENDER");
         debugTotalRenderCount = 0;
 
         foreach (var portal in allPortals)
         {
-            // TODO: Render portal here
+            portal.DeepRender(
+            mainCamera.transform.position,
+            mainCamera.transform.rotation,
+            out _,
+            out _,
+            out var renderCount,
+            portalCamera,
+            0,
+            maxRecursions);
+
+        debugTotalRenderCount += renderCount;
         }
     }
-    private void OnPostRender()
+    private void Update()
     {
         RenderTexturePool.Instance.ReleaseAllTextures();
     }
