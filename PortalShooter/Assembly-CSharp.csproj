@@ -675,6 +675,12 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ProGrids">
+ <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProGrids.Editor">
+ <HintPath>C:/Users/georg/OneDrive/Documents/GitHub/psmain/PortalShooter/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

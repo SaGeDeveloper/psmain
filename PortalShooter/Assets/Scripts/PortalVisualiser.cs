@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ public class PortalVisualiser : MonoBehaviour
     private Camera mainCamera;
     private RenderTexture viewthroughRenderTexture;
     public Camera portalCamera;
-
+    private Vector4 vectorPlane;
     public static Vector3 TransformPositionBetweenPortals(PortalVisualiser sender, PortalVisualiser target, Vector3 position)
     {
         return
@@ -37,7 +37,11 @@ public class PortalVisualiser : MonoBehaviour
         viewthroughRenderTexture = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.DefaultHDR);
         viewthroughRenderTexture.Create();
         mainCamera = Camera.main;
-        // Assign render texture to portal material (cloned)
+        // Generate bounding plane
+
+        var plane = new Plane(normalOut.forward, transform.position);
+        vectorPlane = new Vector4(plane.normal.x, plane.normal.y, plane.normal.z, plane.distance);
+         //Assign render texture to portal material (cloned)
 
         viewthroughMaterial = viewthroughRenderer.material;
         viewthroughMaterial.mainTexture = viewthroughRenderTexture;
@@ -48,6 +52,7 @@ public class PortalVisualiser : MonoBehaviour
         // Assign render texture to portal camera
 
         portalCamera.targetTexture = viewthroughRenderTexture;
+        
 
     }
 
@@ -58,6 +63,16 @@ public class PortalVisualiser : MonoBehaviour
         var virtualRotation = TransformRotationBetweenPortals(this, recursionController.OtherPortal.gameObject.GetComponent<PortalVisualiser>(), mainCamera.transform.rotation);
         // Position camera
         portalCamera.transform.SetPositionAndRotation(virtualPosition, virtualRotation);
+        // Calculate projection matrix
+    
+        var clipThroughSpace = Matrix4x4.Transpose(Matrix4x4.Inverse(portalCamera.worldToCameraMatrix)) * recursionController.OtherPortal.gameObject.GetComponent<PortalVisualiser>().vectorPlane;
+        
+        // Set portal camera projection matrix to clip walls between target portal and portal camera
+        // Inherits main camera near/far clip plane and FOV settings
+        
+        var obliqueProjectionMatrix = mainCamera.CalculateObliqueMatrix(clipThroughSpace);
+        portalCamera.projectionMatrix = obliqueProjectionMatrix;
+        
     }
 
     private void OnDestroy()
