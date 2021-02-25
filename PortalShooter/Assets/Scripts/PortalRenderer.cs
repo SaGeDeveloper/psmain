@@ -22,7 +22,7 @@ public class PortalRenderer : MonoBehaviour
 
     private void LateUpdate()
     {
-        Debug.Log("PRERENDER");
+        //Debug.Log("PRERENDER");
         debugTotalRenderCount = 0;
 
         foreach (var portal in allPortals)
