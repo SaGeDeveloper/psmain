@@ -21,7 +21,7 @@ public class testgun : MonoBehaviour
         while(true){
             if(Input.GetKey(KeyCode.Mouse0)){
                 Aim();
-                Instantiate(prefab, transform.position, transform.rotation).GetComponent<Rigidbody>().velocity = player.GetComponent<Rigidbody>().velocity;
+                Instantiate(prefab, transform.position, transform.rotation);
             }
             yield return new WaitForSeconds(fireRate);
         }

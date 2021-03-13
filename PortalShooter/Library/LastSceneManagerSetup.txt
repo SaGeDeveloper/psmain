@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/RecursionTest1.unity
+- path: "Assets/Scenes/\u044B\u0440\u0449\u0435\u0448\u0442\u043F \u0435\u0443\u044B\u0435.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -121,40 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &20527440 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7250828372311925638, guid: 989fbc1f4a1fd904fab15992409b4958,
-    type: 3}
-  m_PrefabInstance: {fileID: 1091455498}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &20527444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20527440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c57c93084c3ec71498dcb4a6a3d2b1ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portalCamera: {fileID: 723690561}
-  maxRecursions: 2
-  debugTotalRenderCount: 0
---- !u!114 &20527445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20527440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5adff7321c94ed349985bfbf137a0471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSize: 100
 --- !u!1001 &103619089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -289,12 +255,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6828427079745818019, guid: dcfe52c427e4497498004fcb98b42cc3,
     type: 3}
   m_PrefabInstance: {fileID: 103619089}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &113783842 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7250828372311925369, guid: 989fbc1f4a1fd904fab15992409b4958,
-    type: 3}
-  m_PrefabInstance: {fileID: 1091455498}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &155916049
 Mesh:
@@ -3595,7 +3555,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1558
+  m_Name: pb_Mesh-41740
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4944,10 +4904,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1544944679, guid: 989fbc1f4a1fd904fab15992409b4958, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 20527444, guid: 989fbc1f4a1fd904fab15992409b4958, type: 3}
+      propertyPath: portalCamera
+      value: 
+      objectReference: {fileID: 723690561}
     - target: {fileID: 297604212430878848, guid: 989fbc1f4a1fd904fab15992409b4958,
         type: 3}
       propertyPath: m_Mesh
@@ -4958,16 +4918,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 601615711}
-    - target: {fileID: 2444362882928334558, guid: 989fbc1f4a1fd904fab15992409b4958,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 113783842}
-    - target: {fileID: 4233019180313020921, guid: 989fbc1f4a1fd904fab15992409b4958,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 113783842}
     - target: {fileID: 7250828372525463642, guid: 989fbc1f4a1fd904fab15992409b4958,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5022,16 +4972,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250828372525463642, guid: 989fbc1f4a1fd904fab15992409b4958,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250828372525463642, guid: 989fbc1f4a1fd904fab15992409b4958,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7250828372525463653, guid: 989fbc1f4a1fd904fab15992409b4958,
         type: 3}
