@@ -19,6 +19,10 @@ public class PlayerMovement : MonoBehaviour {
 			return col.Count > 0;
 		}
 	}
+
+	public void SetSensitivity(float newValue){
+		sensitivity = newValue;
+	}
 	public void AddScriptRotation(float roty){
 		rotY += roty;
 		Debug.Log((roty, rotY));
@@ -70,6 +74,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		
+		if (PlayerPrefs.HasKey("sensitivity")){
+			sensitivity = PlayerPrefs.GetFloat("sensitivity");
+		}
 	}
 }

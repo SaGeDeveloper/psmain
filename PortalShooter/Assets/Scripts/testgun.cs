@@ -10,10 +10,12 @@ public class testgun : MonoBehaviour
     public float delay;
     public float fireRate;
     public int depth = 1;
+    AudioSource audioData;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Shoot());
+        audioData = GetComponent<AudioSource>();
     }
     IEnumerator Shoot()
     {
@@ -22,6 +24,9 @@ public class testgun : MonoBehaviour
             if(Input.GetKey(KeyCode.Mouse0)){
                 Aim();
                 Instantiate(prefab, transform.position, transform.rotation);
+                if(audioData){
+                    audioData.Play(0);
+                }
             }
             yield return new WaitForSeconds(fireRate);
         }
