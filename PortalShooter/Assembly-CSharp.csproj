@@ -71,9 +71,11 @@
      <Compile Include="Assets\Scripts\RenderTexturePool.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\TestBulletShoot.cs" />
+     <Compile Include="Assets\Scripts\UI\ExitGameButton.cs" />
      <Compile Include="Assets\Scripts\UI\Game Menus\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\UI\Game Menus\PauseSensitivitySlider.cs" />
      <Compile Include="Assets\Scripts\UI\Game Menus\ResumeButton.cs" />
+     <Compile Include="Assets\Scripts\UI\Main Menu\MenuSensitivitySlider.cs" />
      <Compile Include="Assets\Scripts\UI\MenuSwitchButton.cs" />
      <Compile Include="Assets\Scripts\UI\SceneSwitchButton.cs" />
      <Compile Include="Assets\Scripts\UI\VolumeSlider.cs" />
