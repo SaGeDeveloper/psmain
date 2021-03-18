@@ -27,8 +27,9 @@ public class testgun : MonoBehaviour
                 if(audioData){
                     audioData.Play(0);
                 }
+                yield return new WaitForSeconds(fireRate);
             }
-            yield return new WaitForSeconds(fireRate);
+            yield return null;
         }
     }
     float SmartRayCast(Ray ray, int depth, out RaycastHit hit){

@@ -61,6 +61,7 @@
      <Compile Include="Assets\RTST(это для теста, потом удалю)\testPortals.cs" />
      <Compile Include="Assets\Scripts\BulletScript.cs" />
      <Compile Include="Assets\Scripts\CursorScript.cs" />
+     <Compile Include="Assets\Scripts\GunScripts\PistolScript.cs" />
      <Compile Include="Assets\Scripts\HealthController.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PortalCameraMovement.cs" />

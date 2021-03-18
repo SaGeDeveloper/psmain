@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2194,7 +2194,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50534
+  m_Name: pb_Mesh18768
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2360,7 +2360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 429301307}
-  - component: {fileID: 429301308}
+  - component: {fileID: 429301310}
   - component: {fileID: 429301309}
   m_Layer: 9
   m_Name: spawner
@@ -2383,24 +2383,6 @@ Transform:
   m_Father: {fileID: 1939341226}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &429301308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429301306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f8be68b961ba4640bf5d7044e983979, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6194906301325679145, guid: 016e56763f3af834a9ac19aa1c277979, type: 3}
-  player: {fileID: 9098496505110422543}
-  cam: {fileID: 9098496505298337299}
-  delay: 0
-  fireRate: 0.2
-  depth: 3
 --- !u!82 &429301309
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2497,6 +2479,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &429301310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429301306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cf273773f84084a800f24639e9c995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6194906301325679145, guid: 016e56763f3af834a9ac19aa1c277979, type: 3}
+  player: {fileID: 9098496505110422543}
+  cam: {fileID: 9098496505298337299}
+  delay: 0
+  fireRate: 0.2
+  depth: 7
+  anim: {fileID: 1939341227}
 --- !u!1 &444850995
 GameObject:
   m_ObjectHideFlags: 0
@@ -25327,6 +25328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1939341226}
+  - component: {fileID: 1939341227}
   m_Layer: 9
   m_Name: Pistol
   m_TagString: Untagged
@@ -25350,6 +25352,25 @@ Transform:
   m_Father: {fileID: 9098496505298337296}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1939341227
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939341225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 557eac1187f692f4fa764e63fa0d17a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1942721263
 GameObject:
   m_ObjectHideFlags: 0
