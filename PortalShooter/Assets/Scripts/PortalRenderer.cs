@@ -8,9 +8,10 @@ public class PortalRenderer : MonoBehaviour
     public int maxRecursions = 2;
     
     public int debugTotalRenderCount;
-
+    public int maxDist = 100;
     private Camera mainCamera;
     private PortalVisualiser[] allPortals;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class PortalRenderer : MonoBehaviour
 
         foreach (var portal in allPortals)
         {
+            //if (Vector3.Distance(player.transform.position, portal.transform.position) <= maxDist){
             portal.DeepRender(
             mainCamera.transform.position,
             mainCamera.transform.rotation,
@@ -38,6 +40,7 @@ public class PortalRenderer : MonoBehaviour
             maxRecursions);
 
         debugTotalRenderCount += renderCount;
+        //}
         }
     }
     private void Update()

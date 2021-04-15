@@ -2306,8 +2306,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portalCamera: {fileID: 960290468911593133}
-  maxRecursions: 1
+  maxRecursions: 3
   debugTotalRenderCount: 0
+  maxDist: 100
+  player: {fileID: 7250828372525463653}
 --- !u!114 &20527445
 MonoBehaviour:
   m_ObjectHideFlags: 0
