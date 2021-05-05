@@ -18,6 +18,11 @@ public class PistolScript : MonoBehaviour
         StartCoroutine(Shoot());
         audioData = GetComponent<AudioSource>();
     }
+    void OnEnable()
+    {
+        Debug.Log("PrintOnEnable: script was enabled");
+        StartCoroutine(Shoot());
+    }
     IEnumerator Shoot()
     {
         yield return new WaitForSeconds(delay);

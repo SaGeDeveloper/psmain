@@ -28,7 +28,7 @@ public class PortalRenderer : MonoBehaviour
 
         foreach (var portal in allPortals)
         {
-            //if (Vector3.Distance(player.transform.position, portal.transform.position) <= maxDist){
+            if (Vector3.Distance(player.transform.position, portal.transform.position) <= maxDist){
             portal.DeepRender(
             mainCamera.transform.position,
             mainCamera.transform.rotation,
@@ -40,7 +40,7 @@ public class PortalRenderer : MonoBehaviour
             maxRecursions);
 
         debugTotalRenderCount += renderCount;
-        //}
+        }
         }
     }
     private void Update()
