@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PistolScript : MonoBehaviour
 {
+    public int id;
     public GameObject prefab;
     public GameObject player;
     public Camera cam;
@@ -12,29 +13,36 @@ public class PistolScript : MonoBehaviour
     public int depth = 1;
     public Animator anim;
     AudioSource audioData;
+    WeaponSystem wSystem;
+    Coroutine shooter;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Shoot());
+        //StartCoroutine(Shoot());
         audioData = GetComponent<AudioSource>();
+        wSystem = player.GetComponent<WeaponSystem>();
     }
     void OnEnable()
     {
         Debug.Log("PrintOnEnable: script was enabled");
-        StartCoroutine(Shoot());
+        anim.Play("Switching");
+        StopAllCoroutines();
+        shooter = StartCoroutine(Shoot());
     }
     IEnumerator Shoot()
     {
         yield return new WaitForSeconds(delay);
         while(true){
             if(Input.GetKey(KeyCode.Mouse0)){
-                Aim();
-                Instantiate(prefab, transform.position, transform.rotation);
-                if(audioData){
-                    audioData.Play(0);
+                if (wSystem.ammoCheck(id)){
+                    Aim();
+                    Instantiate(prefab, transform.position, transform.rotation);
+                    if(audioData){
+                        audioData.Play(0);
+                    }
+                    anim.Play("Recoil");
+                    yield return new WaitForSeconds(fireRate);
                 }
-                anim.Play("Recoil");
-                yield return new WaitForSeconds(fireRate);
             }
             yield return null;
         }

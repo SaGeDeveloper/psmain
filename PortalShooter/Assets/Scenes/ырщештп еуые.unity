@@ -5547,7 +5547,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4534
+  m_Name: pb_Mesh16662
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5934,6 +5934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf273773f84084a800f24639e9c995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   prefab: {fileID: 6194906301325679145, guid: 016e56763f3af834a9ac19aa1c277979, type: 3}
   player: {fileID: 9098496505110422543}
   cam: {fileID: 9098496505298337299}
@@ -6345,10 +6346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf273773f84084a800f24639e9c995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   prefab: {fileID: 6194906301325679145, guid: 016e56763f3af834a9ac19aa1c277979, type: 3}
   player: {fileID: 1371799860}
   cam: {fileID: 1289112719}
-  delay: 0
+  delay: 0.2
   fireRate: 0.2
   depth: 7
   anim: {fileID: 788286074}
@@ -20017,7 +20019,7 @@ GameObject:
   - component: {fileID: 788286073}
   - component: {fileID: 788286074}
   m_Layer: 9
-  m_Name: Pistol
+  m_Name: Pistol (red)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25252,7 +25254,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6778
+  m_Name: pb_Mesh16778
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25425,7 +25427,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4592
+  m_Name: pb_Mesh16354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31654,7 +31656,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6776
+  m_Name: pb_Mesh16694
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32222,7 +32224,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 788286072}
   - {fileID: 1667178554}
-  ammo: ffffffff0a000000
+  ammo: ffffffff32000000
   exists: 0101
   currentId: 0
   weaponCount: 0
@@ -49061,10 +49063,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf273773f84084a800f24639e9c995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 1
   prefab: {fileID: 6194906301325679145, guid: 016e56763f3af834a9ac19aa1c277979, type: 3}
   player: {fileID: 1371799860}
   cam: {fileID: 1289112719}
-  delay: 0
+  delay: 0.2
   fireRate: 0.2
   depth: 7
   anim: {fileID: 1667178555}
