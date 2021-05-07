@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\UI\MenuSwitchButton.cs" />
      <Compile Include="Assets\Scripts\UI\SceneSwitchButton.cs" />
      <Compile Include="Assets\Scripts\UI\VolumeSlider.cs" />
+     <Compile Include="Assets\Scripts\WeaponPickup.cs" />
      <Compile Include="Assets\Scripts\testgun.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
  <Reference Include="UnityEngine">

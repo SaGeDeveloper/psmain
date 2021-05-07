@@ -15,9 +15,11 @@ public class PistolScript : MonoBehaviour
     AudioSource audioData;
     WeaponSystem wSystem;
     Coroutine shooter;
+    LayerMask aimLayerMask;
     // Start is called before the first frame update
     void Start()
     {
+        aimLayerMask = ~(1 << LayerMask.NameToLayer ("Pickup")); 
         //StartCoroutine(Shoot());
         audioData = GetComponent<AudioSource>();
         wSystem = player.GetComponent<WeaponSystem>();
@@ -49,7 +51,7 @@ public class PistolScript : MonoBehaviour
     }
     float SmartRayCast(Ray ray, int depth, out RaycastHit hit){
         //!!!!!!!!!!!!!!!!!!!!!!!!add distance!!!!!!!!!!!!!!!!!!!!
-        if(Physics.Raycast(ray, out hit)){
+        if(Physics.Raycast(ray, out hit, 1000f, aimLayerMask)){
             Debug.Log(hit.transform.gameObject.name);
             if(hit.transform.gameObject.tag != "Portal"){
             return hit.distance;
