@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6194906301325679148}
   - component: {fileID: 6194906301325679151}
   - component: {fileID: -245224230802975436}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pistol Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -137,3 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9cf781d2c470240bc032353efb68fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
+  lifetime: 5
